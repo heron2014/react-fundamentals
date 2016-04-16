@@ -2,20 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
+  constructor () {
+    super();
+    this.state = {txt: 'this is a state value'}
+  }
   render() {
-    let txt = this.props.txt;
-    return <h1>{txt}</h1>
+    return <h1>{this.state.txt}</h1>
   }
 }
 
-App.propTypes = {
-  txt: React.PropTypes.string,
-  cat: React.PropTypes.number.isReguired
-}
-
-App.defaultProps = {
-  txt: 'this is a default value'
-}
+// App.propTypes = {
+//   txt: React.PropTypes.string,
+//   cat: React.PropTypes.number.isReguired
+// }
+//
+// App.defaultProps = {
+//   txt: 'this is a default value'
+// }
 // export default App
 
-ReactDOM.render(<App cat={5} />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
