@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class App extends React.Component {
   constructor () {
     super();
-    this.state = {txt: 'this is a state value'}
+    this.state = {txt: ''}
     this.update = this.update.bind(this)
   }
 
