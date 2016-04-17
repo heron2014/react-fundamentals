@@ -26,6 +26,7 @@ class App8 extends React.Component {
         max={255}
         step={1}
         val={+this.state.red}
+        type="number"
         label='Red'
         update={this.update} />
       </div>
