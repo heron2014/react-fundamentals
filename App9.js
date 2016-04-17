@@ -17,7 +17,7 @@ class App9 extends React.Component {
   }
   render () {
     let rows = this.state.data.map(person => {
-      return <PersonRow data={person} />
+      return <PersonRow key={person.id} data={person} />
     })
     return (
        <table>
