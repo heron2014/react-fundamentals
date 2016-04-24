@@ -21,6 +21,7 @@ class App10 extends Component {
     super(props);
 
     this.state = {items: [], txt: ''};
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
@@ -34,11 +35,10 @@ class App10 extends Component {
       <div>
         <h1>ToDO</h1>
         <ToDoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form onSubmit={this.handleSubmit}>
           <input
             value={this.state.txt}
             onChange={event => this.setState({txt: event.target.value})} />
-            The value is {this.state.txt}
           <button>{'Add #' + (this.state.items.length + 1)}</button>
         </form>
       </div>
